@@ -1,0 +1,706 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    
+}
+
+.header {
+    position: relative;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    
+}
+
+.header::before {
+    width: 100%;
+    min-height: 450px;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 400px;
+    background-image: url(../img/banner-bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(40%);
+    z-index: 1;
+    
+}
+
+.top-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    z-index: 3;
+    margin-left: 100px;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+.menu {
+    z-index: 3;
+    margin-right: 100px;
+    margin-left: 30px
+}
+
+.menu__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu__list-item {
+    margin-right: 35px;
+}
+
+.menu__link {
+    color: white;
+    text-decoration: underline; 
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.menu__link:hover {
+    text-decoration: none; 
+}
+
+.header__slogan {
+    position: absolute;
+    top: -90%;
+    left: 83%;
+    transform: translate(-50%, calc(100% + 20px)); 
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 1400px) {
+    .header__slogan {
+        left: calc(83% - (20% * ((1400 - 1000) / (1400 - 800))));
+    }
+}
+
+@media (max-width: 1200px) {
+    .header__slogan {
+        left: 73%; /* Промежуточное значение */
+    }
+}
+
+@media (max-width: 1000px) {
+    .header__slogan {
+        left: 63%; /* Конечное значение */
+    }
+}
+.container {
+    position: relative;
+    z-index: 2;
+}
+
+.intro {
+    font-size: 2.5em;
+    margin: 0;
+    text-align: center; 
+    max-width: 600px; 
+    white-space: normal; 
+    word-wrap: break-word; 
+    position: relative;
+}
+
+
+/*## Trend #######################*/
+main {
+    flex-grow: 1;
+    padding: 400px 0 50px ;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+.title{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+}
+
+.main__title{
+    position: relative;
+}
+
+.title:before {
+    content: "";
+    position: absolute;
+    background-color:#B59F5B;
+    text-decoration: underline; 
+    width: 8%;
+    height: 4px;
+    bottom: -10px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 1400px) {
+    .title:before {
+        width: 11%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .title:before {
+        width: 12%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .title:before {
+        width: 14%;
+    }
+}
+
+.Trends {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px; 
+    justify-content: space-between; 
+    max-width: 100%; 
+    padding: 10px 0;
+    margin: 0 auto;
+}
+
+.card {
+    width: calc(25% - 10px); 
+    height: 319px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-sizing: border-box; 
+}
+
+@media (max-width: 900px){
+    .card{
+        width: calc(50% - 10px);
+    }
+}
+
+@media (min-width: 1000px){
+    .card{
+        width: calc(25% - 10px);
+    }
+}
+
+.post__previewbox {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.post__preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Сохраняем пропорции изображения */
+    filter: brightness(40%); /* Затемнение изображения */
+}
+
+.card-content {
+    position: absolute; /* Абсолютное позиционирование */
+    bottom: 20px; /* Отступ снизу */
+    left: 20px; /* Отступ слева */
+    right: 20px; /* Отступ справа */
+    border: 2px solid #B59F5B; /* Рамка */
+    padding: 15px; /* Отступ внутри рамки */
+    color: #fff; /* Белый текст */
+    z-index: 2; /* Убедимся, что текст поверх изображения */
+}
+
+.category {
+    color: #B59F5B; /* Цвет текста категории */
+    margin-bottom: 5px; /* Отступ между категорией и описанием */
+    font-weight: bold;
+    font-size: 19px;
+    font-family: "OpenSans-Regular";
+    src: url("./fonts/OpenSans-Regular.ttf") format("truerype");
+    
+   
+}
+p {
+    /*придумай с размером */
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "OpenSans-Regular";
+    src: url("./fonts/OpenSans-Regular.ttf") format("truerype");
+}
+
+/* Убираем горизонтальную полосу прокрутки */
+.Trends::-webkit-scrollbar {
+    display: none;
+}
+
+.Trends {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin-bottom: 40px;
+}
+
+.MainInfo {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.post-side{
+    float: right;
+    width: 40%;
+    height: 160vh;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+
+
+.last-side-image{
+    float: left;
+    flex-shrink: 0;
+    margin-left: 5px;
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.last-side-text {
+    display: flex; /* Включаем Flexbox */
+    align-items: flex-start; /* Выравниваем элементы по верхнему краю */
+    gap: 0px; /* Отступ между изображением и текстом */
+    margin-bottom: 20px; /* Отступ между блоками */
+   
+}
+
+.last-date {
+    flex-grow: 1; /* Текст занимает оставшееся пространство */
+    margin-right: 5px;
+}
+
+.last-date h6 {
+    margin: 0;
+    font-size: 14px;
+    color: #808080;
+    
+    
+}
+
+.last-date p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333333;
+}
+
+.image-post{
+    float: left;
+    margin-left: 15px;
+    width: 100px;
+    height: auto;
+}
+
+.side_title{
+    position: relative;
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-size: 16px;
+    color:#000;
+}
+
+.side_title .title:before {
+    width: 20%;
+    height: 4px;
+    margin-bottom: -5px;
+}
+
+.search{
+    box-sizing: border-box;
+    display: flex;
+    align-items: stretch;
+    width: auto;
+    min-width: 150px;
+    max-width: 300px;
+    height: 35px;
+}
+
+.search_input{
+    flex: 1;
+    display: block;
+    border:none;
+    width: auto;
+    padding: 8px;
+    font-size: 14px;
+    border-right: none;
+    outline: none;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #f4f7f6;
+    color: #333333;
+    
+}
+
+.search_submit{
+    padding: 8px;
+    background-color: #B59F5B;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.search-container {
+    width: auto;
+    min-width: 235px;
+    max-width: 300px;
+}
+
+
+.search_submit img{
+    width: 16px;
+    height: 16px;
+}
+
+.subscribe-container{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    width: auto;
+    min-width: 250px;
+    max-width: 300px;
+   
+}
+
+.subscribe{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 550px;   
+    height: 40px; 
+    margin: 0 auto;
+    margin-bottom: 70px;
+}
+
+.subscribe_input{
+    flex: 1;
+    border:none;
+    width: 100%; 
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+    background-color: #f4f7f6;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.subscribe_buttom{
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 40px;
+    padding: 15px 20px;
+    font-size: 18px;
+    background-color: #B59F5B;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    color:white;
+    text-transform: uppercase;
+    width: auto;
+}
+
+.tags-container {
+    display: flex;
+    width: auto;
+    min-width: 135px;
+    max-width: 335px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px; /
+}
+
+.tags_label {
+    display: inline-block;
+    text-decoration: none; 
+    border: 2px solid #ededed;
+    font-weight: bold;
+    padding: 5px 10px;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+    font-size: 12px;
+}
+
+.tags_label:hover {
+    background: #ededed;
+    color: #000;
+}
+
+.topics_category { 
+    position: relative;
+    left: -10px;
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+}
+
+.topics_list li { 
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd; 
+    margin-bottom: 2px;
+    list-style: none; 
+}
+
+.topics_list li a { 
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    user-select: none; 
+}
+
+.count {
+    font-size: 14px;
+    color: #B59F5B;
+    margin-left: 10px; 
+}
+
+.main-content {
+    width: 70% ;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 50px;
+    margin-right: 40px;
+}
+.news-item {
+    display: flex;
+    align-items: center;
+    gap: 30px; 
+    margin-bottom: 40px;
+    margin-right: 25px;
+}
+
+.news-item img {
+    width: 320px; 
+    height: 225px;
+    object-fit: cover;
+    
+}
+
+.news-content {
+    flex: 1; 
+}
+
+
+/* Основные стили для секции товаров */
+.products {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center; /* Центрируем товары по горизонтали */
+    gap: 20px; /* Отступ между товарами */
+    width: 100%;/* Максимальная ширина контейнера */
+    margin: 0 auto; /* Центрируем контейнер на странице */
+    padding: 20px; /* Отступы внутри контейнера */
+    
+}
+
+/* Стили для каждого товара */
+.product {
+    background-color: #fff;
+    padding: 0;
+    width: 28%;
+    text-align: left;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 50px; /* Отступ между контейнерами */
+}
+
+/* Убираем отступ у последнего элемента */
+.product:last-child {
+    margin-right: 0;
+}
+
+/* Контейнер для содержимого товара */
+.product-container {
+    border: 2px solid #B59F5B; /* Рамка цвета кнопки */
+    padding: 15px; /* Уменьшаем внутренние отступы */
+    justify-content: space-between;
+    gap: 20;
+    margin-top: -30px; 
+    position: relative;
+    z-index: 2; 
+    min-height: 245px; /* Минимальная высота */
+    overflow: hidden; 
+    width: 100%; /* Занимает всю ширину родителя */
+}
+
+/* Изображение товара */
+.shop_img {
+    width: 400px; /* Ширина изображения */
+    height: auto; /* Высота изображения */
+    object-fit: cover; /* Сохраняем пропорции изображения */
+    margin-bottom: 10px; /* Сдвигаем изображение вверх */
+    position: relative;
+    margin: 0 auto;
+    z-index: 1; /* Убедимся, что изображение находится над контейнером */
+}
+
+/* Заголовок товара */
+.product h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Описание товара */
+.product p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Ссылка в описании */
+.product a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.product a:hover {
+    text-decoration: underline;
+}
+
+/* Таблица с ценами */
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.price-table td {
+    padding: 10px;
+
+    font-size: 18px;
+    color: #333; /* Черный цвет для текста */
+    font-weight: bold;
+    vertical-align: middle; 
+}
+
+/* Зачеркнутая цена (скидка) */
+.price-table td del {
+    color: #333; /* Черный цвет для зачеркнутой цены */
+    font-size: 16px;
+    display: block; 
+    font-weight: bold;
+    margin-bottom: 5px; 
+}
+
+/* Новая цена */
+.price-table td span {
+    font-size: 18px;
+    color: #333; /* Черный цвет для новой цены */
+    font-weight: bold;
+}
+
+/* Кнопка "В МАГАЗИН" */
+.btn {
+    float: right;
+    display: inline-block;
+    background-color: #B59F5B; 
+    padding: 10px 20px; /* Добавляем отступы для размера кнопки */
+    color:  black; /* Цвет текста */
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+
+    
+}
+
+.btn:hover {
+    background-color: #B59F5B; 
+    border-color: #B59F5B; 
+}
+
+.shop_title{
+    margin-bottom: 30px;
+    border: 2px;
+}
+
+.footer {
+    width: 1200px;
+    background-color: #f4f7f6;
+    padding: 20px 0;
+    border-top: 1px solid #e7e7e7;
+    margin: 0 auto;
+}
+
+.footer-container {
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-logo img {
+    max-width: 40px; 
+    height: auto;
+}
+
+.footer-description p {
+    margin: 0 auto;
+    font-size: 14px;
+    color: #000;
+    text-align: center;
+    padding: 10px 20px;
+    
+}
+
+.footer-logos {
+    display: flex;
+    justify-content: center; 
+    gap: 10px; 
+    margin-top: 10px;
+}
+
+.footer-logos img {
+    width: 40px;
+    height: 40px;
+}
